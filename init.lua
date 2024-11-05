@@ -966,5 +966,10 @@ require('lazy').setup({
   },
 })
 
+local ucmd = vim.api.nvim_create_user_command
+ucmd('SpellEnglish', "let &l:spelllang='en' | setlocal spell", {})
+ucmd('SpellGerman', "let &l:spelllang='de' | setlocal spell", {})
+ucmd('SpellDisable', 'setlocal nospell', {})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
