@@ -65,6 +65,9 @@ return {
         -- lua
         null_ls.builtins.formatting.stylua,
 
+        -- lua
+        null_ls.builtins.formatting.clang_format,
+
         -- qml
         null_ls.builtins.diagnostics.qmllint,
 
@@ -77,6 +80,7 @@ return {
             end
           end,
         },
+
         null_ls.builtins.diagnostics.markdownlint.with {
           extra_args = function(params)
             local uri = params.lsp_params.textDocument.uri
